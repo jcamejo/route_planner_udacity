@@ -56,13 +56,35 @@ int main(int argc, const char **argv) {
 
     cout << "Enter X coordinate of starting point: ";
     cin >> start_x;
+
+    if (start_x < 0 || start_x > 100) {
+      cout << "The coordinate must be between 0 and 100" << "\n";
+      return 0;
+    }
+
     cout << "Enter Y coordinate of starting point: ";
     cin >> start_y;
 
+    if (start_y < 0 || start_y > 100) {
+      cout << "The coordinate must be between 0 and 100" << "\n";
+      return 0;
+    }
+
     cout << "Enter X coordinate of goal point: ";
     cin >> end_x;
+
+    if (end_x < 0 || end_x > 100) {
+      cout << "The coordinate must be between 0 and 100" << "\n";
+      return 0;
+    }
+
     cout << "Enter Y coordinate of goal point: ";
     cin >> end_y;
+
+    if (end_y < 0 || end_y > 100) {
+      cout << "The coordinate must be between 0 and 100" << "\n";
+      return 0;
+    }
 
     // Build Model.
     RouteModel model{osm_data};
